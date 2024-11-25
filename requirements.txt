@@ -1,0 +1,10 @@
+torch
+torchvision
+opencv-python
+pyzmq
+av
+transformers
+numpy
+matplotlib
+seaborn
+scipy
