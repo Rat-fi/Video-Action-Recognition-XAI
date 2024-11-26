@@ -25,22 +25,16 @@ class AttentionExtractor:
         self.device = device
         self.image_processor = AutoImageProcessor.from_pretrained(model_name)
         self.id2label = self.model.config.id2label
-        logging.info("AttentionExtractor initialized successfully.")
 
     def extract_attention(self, frames):
-        logging.info(f"Extracting attention and logits for {len(frames)} frames.")
         inputs = self.image_processor(frames, return_tensors="pt").to(self.device)
-        logging.info(f"Input tensor shape: {inputs['pixel_values'].shape}")  # Debug input shape
         with torch.no_grad():
             outputs = self.model(**inputs, output_attentions=True)
         last_layer_attention = outputs.attentions[-1]
-        logging.info(f"Last layer attention shape: {last_layer_attention.shape}")  # Debug attention shape
         spatial_attention = last_layer_attention.mean(1)
-        logging.info(f"Logits shape: {outputs.logits.shape}")  # Debug logits shape
         return spatial_attention.cpu().numpy(), outputs.logits.cpu().numpy()
 
     def apply_attention_heatmap(self, frame, attention, predicted_label):
-        logging.info(f"Applying attention heatmap for predicted label: {self.id2label[predicted_label]}")
         att_map = attention[1:].reshape(int(np.sqrt(attention.shape[0] - 1)), -1)
         att_resized = cv2.resize(att_map, (frame.shape[1], frame.shape[0]))
         att_norm = (att_resized - att_resized.min()) / (att_resized.max() - att_resized.min())
@@ -61,7 +55,6 @@ class AttentionExtractor:
 
 class VideoServer:
     def __init__(self, model_name, output_dir, port=6000, client_port=6001):
-        logging.info(f"Starting VideoServer on port {port} and client port {client_port}.")
         self.extractor = AttentionExtractor(model_name)
         self.output_dir = output_dir
         os.makedirs(self.output_dir, exist_ok=True)
@@ -80,37 +73,40 @@ class VideoServer:
         self.attention_buffer = []
         self.all_logits = []
         self.frame_count = 0
-        logging.info("VideoServer initialized successfully.")
 
     def preprocess_frame(self, frame, config):
-
-        logging.info(f"Preprocessing frame with config: {config}")
-
-        pil_img = PILImage.fromarray(frame)  # Convert frame to PIL Image
+        pil_img = PILImage.fromarray(frame)
 
         # Apply resizing
         if config.get("resize", False):
             resized_img = trn.Resize(256)(pil_img)
             frame = np.array(resized_img)
-            logging.info("Resized frame to 256.")
 
         # Apply cropping
         if config.get("crop", False):
             cropped_img = trn.CenterCrop(224)(PILImage.fromarray(frame))
             frame = np.array(cropped_img)
-            logging.info("Cropped frame to 224x224.")
 
         # Apply adversarial noise
         if config.get("adversarial") == "noise":
-            logging.info("Adding shot noise to the frame.")
             z = np.array(frame, copy=True) / 255.0
             noisy_img = np.clip(np.random.poisson(z * 300) / 300.0, 0, 1)
             frame = np.uint8(255 * noisy_img)
 
+        # Apply Gaussian blur
+        if config.get("adversarial") == "blur":
+            kernel_size = 9 
+            frame = cv2.GaussianBlur(frame, (kernel_size, kernel_size), 0)
+
+        # Apply brightness and contrast adjustment
+        if config.get("adversarial") == "crbr":
+            alpha = 1.5
+            beta = 50 
+            frame = cv2.convertScaleAbs(frame, alpha=alpha, beta=beta)
+
         return frame
 
     def receive_frames(self):
-        logging.info("Waiting to receive frames from client...")
         while self.running:
             message = self.recv_socket.recv_pyobj()
             if message == "LAST FRAME":
@@ -152,7 +148,6 @@ class VideoServer:
 
                 continue
 
-            logging.info("Frames received from client.")
             self.process_frames(message)
 
     def process_frames(self, message):
@@ -171,18 +166,14 @@ class VideoServer:
             frames = [item[0] for item in batch]
             configs = [item[1] for item in batch]
 
-            logging.info("Preprocessing batch of frames.")
-
             # Preprocess all frames in the batch based on their respective configurations
             preprocessed_frames = [self.preprocess_frame(frame, config) for frame, config in zip(frames, configs)]
 
-            logging.info("Classifying original frames.")
             # Classify original frames (entire sequence)
             spatial_attention_original, logits_original = self.extractor.extract_attention(frames)
             predicted_label_original = int(np.argmax(logits_original))  # Sequence-level prediction
             attention_original = spatial_attention_original.mean(axis=0)  # Average attention across heads
 
-            logging.info("Classifying preprocessed frames.")
             # Classify preprocessed frames (entire sequence)
             spatial_attention_processed, logits_processed = self.extractor.extract_attention(preprocessed_frames)
             predicted_label_processed = int(np.argmax(logits_processed))  # Sequence-level prediction
@@ -215,8 +206,6 @@ class VideoServer:
                 classified_processed_frame = self.extractor.apply_attention_heatmap(
                     preprocessed_frames[i], attention_processed[-1], predicted_label_processed
                 )
-
-                logging.info(f"Sending processed frame {self.frame_count + i} to client.")
                 self.send_socket.send_pyobj((
                     frames[i],
                     classified_original_frame,
@@ -225,17 +214,11 @@ class VideoServer:
 
             self.frame_count += batch_size
 
-        logging.info("Batch processing completed.")
-
     def run(self):
         logging.info("VideoServer is now running.")
         Thread(target=self.receive_frames).start()
-        while self.running:
-            time.sleep(1)
-        logging.info("VideoServer has shut down.")
 
 
 if __name__ == "__main__":
     server = VideoServer('facebook/timesformer-base-finetuned-k400', 'Realtime')
-    logging.info("Server started on port 6000.")
     server.run()
