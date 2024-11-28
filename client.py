@@ -172,7 +172,7 @@ if __name__ == "__main__":
     parser.add_argument("-server", type=str, required=True, help="Server's ip address")
     parser.add_argument("-resize", type=str, default="off", help="Enable resizing: on/off")
     parser.add_argument("-crop", type=str, default="off", help="Enable cropping: on/off")
-    parser.add_argument("-adversarial", type=str, default="none", help="Adversarial attack: none/noise")
+    parser.add_argument("-adversarial", type=str, default="none", help="Adversarial attack: none/noise/blur/crbr")
     args = parser.parse_args()
 
     server_address = f"tcp://{args.server}:6000"

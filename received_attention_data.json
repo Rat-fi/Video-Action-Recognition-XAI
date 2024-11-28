@@ -1,0 +1,512 @@
+[
+    {
+        "sequence_index": 0,
+        "original": {
+            "max_attention": 0.04164803773164749,
+            "min_attention": 0.00040586828254163265,
+            "mean_attention": 0.005076142027974129,
+            "predicted_label": 306
+        },
+        "processed": {
+            "max_attention": 0.06745347380638123,
+            "min_attention": 0.00039149803342297673,
+            "mean_attention": 0.005076142027974129,
+            "predicted_label": 207
+        }
+    },
+    {
+        "sequence_index": 1,
+        "original": {
+            "max_attention": 0.049286920577287674,
+            "min_attention": 0.00036551570519804955,
+            "mean_attention": 0.005076142027974129,
+            "predicted_label": 306
+        },
+        "processed": {
+            "max_attention": 0.06977567076683044,
+            "min_attention": 0.00046849166392348707,
+            "mean_attention": 0.005076142027974129,
+            "predicted_label": 207
+        }
+    },
+    {
+        "sequence_index": 2,
+        "original": {
+            "max_attention": 0.07473427802324295,
+            "min_attention": 0.00044063301174901426,
+            "mean_attention": 0.005076142027974129,
+            "predicted_label": 306
+        },
+        "processed": {
+            "max_attention": 0.06445754319429398,
+            "min_attention": 0.0003387542674317956,
+            "mean_attention": 0.005076142027974129,
+            "predicted_label": 306
+        }
+    },
+    {
+        "sequence_index": 3,
+        "original": {
+            "max_attention": 0.11027088761329651,
+            "min_attention": 0.0003222037630621344,
+            "mean_attention": 0.005076142493635416,
+            "predicted_label": 67
+        },
+        "processed": {
+            "max_attention": 0.0965653583407402,
+            "min_attention": 0.0004545884730760008,
+            "mean_attention": 0.005076142027974129,
+            "predicted_label": 67
+        }
+    },
+    {
+        "sequence_index": 4,
+        "original": {
+            "max_attention": 0.060045480728149414,
+            "min_attention": 0.0005654731648974121,
+            "mean_attention": 0.005076142493635416,
+            "predicted_label": 275
+        },
+        "processed": {
+            "max_attention": 0.04582590609788895,
+            "min_attention": 0.0006921855383552611,
+            "mean_attention": 0.005076142027974129,
+            "predicted_label": 199
+        }
+    },
+    {
+        "sequence_index": 5,
+        "original": {
+            "max_attention": 0.0483393594622612,
+            "min_attention": 0.0003197277837898582,
+            "mean_attention": 0.005076142027974129,
+            "predicted_label": 67
+        },
+        "processed": {
+            "max_attention": 0.03480381518602371,
+            "min_attention": 0.00039196517900563776,
+            "mean_attention": 0.005076142027974129,
+            "predicted_label": 207
+        }
+    },
+    {
+        "sequence_index": 6,
+        "original": {
+            "max_attention": 0.04315020516514778,
+            "min_attention": 0.0005215342971496284,
+            "mean_attention": 0.005076142027974129,
+            "predicted_label": 122
+        },
+        "processed": {
+            "max_attention": 0.03641544282436371,
+            "min_attention": 0.00029657917912118137,
+            "mean_attention": 0.005076141562312841,
+            "predicted_label": 122
+        }
+    },
+    {
+        "sequence_index": 7,
+        "original": {
+            "max_attention": 0.04427522048354149,
+            "min_attention": 0.00029910256853327155,
+            "mean_attention": 0.005076142027974129,
+            "predicted_label": 122
+        },
+        "processed": {
+            "max_attention": 0.031502433121204376,
+            "min_attention": 0.00035940465750172734,
+            "mean_attention": 0.005076142027974129,
+            "predicted_label": 122
+        }
+    },
+    {
+        "sequence_index": 8,
+        "original": {
+            "max_attention": 0.05684782564640045,
+            "min_attention": 0.00041108575533144176,
+            "mean_attention": 0.005076141562312841,
+            "predicted_label": 201
+        },
+        "processed": {
+            "max_attention": 0.03409431129693985,
+            "min_attention": 0.00040572864236310124,
+            "mean_attention": 0.005076142027974129,
+            "predicted_label": 201
+        }
+    },
+    {
+        "sequence_index": 9,
+        "original": {
+            "max_attention": 0.05685168504714966,
+            "min_attention": 0.0003781735722441226,
+            "mean_attention": 0.005076142027974129,
+            "predicted_label": 201
+        },
+        "processed": {
+            "max_attention": 0.04374954104423523,
+            "min_attention": 0.00032475905027240515,
+            "mean_attention": 0.005076142027974129,
+            "predicted_label": 201
+        }
+    },
+    {
+        "sequence_index": 10,
+        "original": {
+            "max_attention": 0.05601637065410614,
+            "min_attention": 0.0004117132048122585,
+            "mean_attention": 0.005076142027974129,
+            "predicted_label": 122
+        },
+        "processed": {
+            "max_attention": 0.05442633852362633,
+            "min_attention": 0.0002743253135122359,
+            "mean_attention": 0.005076142027974129,
+            "predicted_label": 122
+        }
+    },
+    {
+        "sequence_index": 11,
+        "original": {
+            "max_attention": 0.03279929980635643,
+            "min_attention": 0.000410473789088428,
+            "mean_attention": 0.005076141562312841,
+            "predicted_label": 122
+        },
+        "processed": {
+            "max_attention": 0.02690218761563301,
+            "min_attention": 0.00048314218292944133,
+            "mean_attention": 0.005076142027974129,
+            "predicted_label": 122
+        }
+    },
+    {
+        "sequence_index": 12,
+        "original": {
+            "max_attention": 0.02842005155980587,
+            "min_attention": 0.0004803412011824548,
+            "mean_attention": 0.005076142027974129,
+            "predicted_label": 122
+        },
+        "processed": {
+            "max_attention": 0.02989126555621624,
+            "min_attention": 0.00038066101842559874,
+            "mean_attention": 0.005076142027974129,
+            "predicted_label": 122
+        }
+    },
+    {
+        "sequence_index": 13,
+        "original": {
+            "max_attention": 0.029206395149230957,
+            "min_attention": 0.0004033404402434826,
+            "mean_attention": 0.005076142027974129,
+            "predicted_label": 122
+        },
+        "processed": {
+            "max_attention": 0.037685051560401917,
+            "min_attention": 0.0004587563162203878,
+            "mean_attention": 0.005076142493635416,
+            "predicted_label": 122
+        }
+    },
+    {
+        "sequence_index": 14,
+        "original": {
+            "max_attention": 0.03569699451327324,
+            "min_attention": 0.00042887276504188776,
+            "mean_attention": 0.005076142027974129,
+            "predicted_label": 122
+        },
+        "processed": {
+            "max_attention": 0.035527776926755905,
+            "min_attention": 0.00033233725116588175,
+            "mean_attention": 0.005076142027974129,
+            "predicted_label": 122
+        }
+    },
+    {
+        "sequence_index": 15,
+        "original": {
+            "max_attention": 0.03613768145442009,
+            "min_attention": 0.00030448593315668404,
+            "mean_attention": 0.005076142027974129,
+            "predicted_label": 122
+        },
+        "processed": {
+            "max_attention": 0.039576537907123566,
+            "min_attention": 0.0002456942165736109,
+            "mean_attention": 0.005076142027974129,
+            "predicted_label": 122
+        }
+    },
+    {
+        "sequence_index": 16,
+        "original": {
+            "max_attention": 0.043094195425510406,
+            "min_attention": 0.000297391350613907,
+            "mean_attention": 0.005076142027974129,
+            "predicted_label": 122
+        },
+        "processed": {
+            "max_attention": 0.028950192034244537,
+            "min_attention": 0.0003664784599095583,
+            "mean_attention": 0.005076141562312841,
+            "predicted_label": 122
+        }
+    },
+    {
+        "sequence_index": 17,
+        "original": {
+            "max_attention": 0.033023230731487274,
+            "min_attention": 0.00025294278748333454,
+            "mean_attention": 0.005076142027974129,
+            "predicted_label": 122
+        },
+        "processed": {
+            "max_attention": 0.03450590372085571,
+            "min_attention": 0.0002710698754526675,
+            "mean_attention": 0.005076142027974129,
+            "predicted_label": 122
+        }
+    },
+    {
+        "sequence_index": 18,
+        "original": {
+            "max_attention": 0.031285885721445084,
+            "min_attention": 0.00024303254031110555,
+            "mean_attention": 0.005076142027974129,
+            "predicted_label": 122
+        },
+        "processed": {
+            "max_attention": 0.03506544977426529,
+            "min_attention": 0.00017638280405662954,
+            "mean_attention": 0.005076142027974129,
+            "predicted_label": 122
+        }
+    },
+    {
+        "sequence_index": 19,
+        "original": {
+            "max_attention": 0.02546684257686138,
+            "min_attention": 0.000532757374458015,
+            "mean_attention": 0.005076141562312841,
+            "predicted_label": 122
+        },
+        "processed": {
+            "max_attention": 0.03826966509222984,
+            "min_attention": 0.00039421909605152905,
+            "mean_attention": 0.005076142493635416,
+            "predicted_label": 122
+        }
+    },
+    {
+        "sequence_index": 20,
+        "original": {
+            "max_attention": 0.022340938448905945,
+            "min_attention": 0.00037948618410155177,
+            "mean_attention": 0.005076141562312841,
+            "predicted_label": 77
+        },
+        "processed": {
+            "max_attention": 0.02267797291278839,
+            "min_attention": 0.0003267606080044061,
+            "mean_attention": 0.005076142027974129,
+            "predicted_label": 122
+        }
+    },
+    {
+        "sequence_index": 21,
+        "original": {
+            "max_attention": 0.027145372703671455,
+            "min_attention": 0.00034784807940013707,
+            "mean_attention": 0.005076142027974129,
+            "predicted_label": 122
+        },
+        "processed": {
+            "max_attention": 0.021979698911309242,
+            "min_attention": 0.0002477806992828846,
+            "mean_attention": 0.005076141562312841,
+            "predicted_label": 122
+        }
+    },
+    {
+        "sequence_index": 22,
+        "original": {
+            "max_attention": 0.021026061847805977,
+            "min_attention": 0.00048705609515309334,
+            "mean_attention": 0.005076142027974129,
+            "predicted_label": 122
+        },
+        "processed": {
+            "max_attention": 0.02833382785320282,
+            "min_attention": 0.0006053555989637971,
+            "mean_attention": 0.005076142027974129,
+            "predicted_label": 260
+        }
+    },
+    {
+        "sequence_index": 23,
+        "original": {
+            "max_attention": 0.026883799582719803,
+            "min_attention": 0.0004325605696067214,
+            "mean_attention": 0.005076141562312841,
+            "predicted_label": 260
+        },
+        "processed": {
+            "max_attention": 0.038281504064798355,
+            "min_attention": 0.0005085442098788917,
+            "mean_attention": 0.005076142027974129,
+            "predicted_label": 122
+        }
+    },
+    {
+        "sequence_index": 24,
+        "original": {
+            "max_attention": 0.020075839012861252,
+            "min_attention": 0.0007411164697259665,
+            "mean_attention": 0.005076142493635416,
+            "predicted_label": 139
+        },
+        "processed": {
+            "max_attention": 0.03997508063912392,
+            "min_attention": 0.000484908145153895,
+            "mean_attention": 0.005076142027974129,
+            "predicted_label": 305
+        }
+    },
+    {
+        "sequence_index": 25,
+        "original": {
+            "max_attention": 0.020659083500504494,
+            "min_attention": 0.00047347601503133774,
+            "mean_attention": 0.005076142027974129,
+            "predicted_label": 395
+        },
+        "processed": {
+            "max_attention": 0.020482275635004044,
+            "min_attention": 0.0008825946133583784,
+            "mean_attention": 0.005076142027974129,
+            "predicted_label": 395
+        }
+    },
+    {
+        "sequence_index": 26,
+        "original": {
+            "max_attention": 0.01822257973253727,
+            "min_attention": 0.00043971065315417945,
+            "mean_attention": 0.005076142493635416,
+            "predicted_label": 305
+        },
+        "processed": {
+            "max_attention": 0.026675591245293617,
+            "min_attention": 0.0009739914094097912,
+            "mean_attention": 0.005076142027974129,
+            "predicted_label": 305
+        }
+    },
+    {
+        "sequence_index": 27,
+        "original": {
+            "max_attention": 0.022114399820566177,
+            "min_attention": 0.0011808783747255802,
+            "mean_attention": 0.005076142027974129,
+            "predicted_label": 19
+        },
+        "processed": {
+            "max_attention": 0.01745632477104664,
+            "min_attention": 0.0009570984402671456,
+            "mean_attention": 0.005076142027974129,
+            "predicted_label": 359
+        }
+    },
+    {
+        "sequence_index": 28,
+        "original": {
+            "max_attention": 0.030152389779686928,
+            "min_attention": 0.0004812448751181364,
+            "mean_attention": 0.005076142027974129,
+            "predicted_label": 295
+        },
+        "processed": {
+            "max_attention": 0.030378514900803566,
+            "min_attention": 0.0004632214258890599,
+            "mean_attention": 0.005076142027974129,
+            "predicted_label": 374
+        }
+    },
+    {
+        "sequence_index": 29,
+        "original": {
+            "max_attention": 0.028749017044901848,
+            "min_attention": 0.000521079869940877,
+            "mean_attention": 0.005076142027974129,
+            "predicted_label": 150
+        },
+        "processed": {
+            "max_attention": 0.030709974467754364,
+            "min_attention": 0.0004161977849435061,
+            "mean_attention": 0.005076141562312841,
+            "predicted_label": 179
+        }
+    },
+    {
+        "sequence_index": 30,
+        "original": {
+            "max_attention": 0.03653358668088913,
+            "min_attention": 0.0003643887466751039,
+            "mean_attention": 0.005076142027974129,
+            "predicted_label": 179
+        },
+        "processed": {
+            "max_attention": 0.044748399406671524,
+            "min_attention": 0.00036658046883530915,
+            "mean_attention": 0.005076142027974129,
+            "predicted_label": 53
+        }
+    },
+    {
+        "sequence_index": 31,
+        "original": {
+            "max_attention": 0.026214784011244774,
+            "min_attention": 0.0004418890457600355,
+            "mean_attention": 0.005076142027974129,
+            "predicted_label": 212
+        },
+        "processed": {
+            "max_attention": 0.023064300417900085,
+            "min_attention": 0.0004474090819712728,
+            "mean_attention": 0.005076142027974129,
+            "predicted_label": 131
+        }
+    },
+    {
+        "sequence_index": 32,
+        "original": {
+            "max_attention": 0.01348177995532751,
+            "min_attention": 0.0012914964463561773,
+            "mean_attention": 0.005076142027974129,
+            "predicted_label": 149
+        },
+        "processed": {
+            "max_attention": 0.022115416824817657,
+            "min_attention": 0.0014253563713282347,
+            "mean_attention": 0.005076142027974129,
+            "predicted_label": 149
+        }
+    },
+    {
+        "sequence_index": 33,
+        "original": {
+            "max_attention": 0.025315923616290092,
+            "min_attention": 0.0006387002649717033,
+            "mean_attention": 0.005076142027974129,
+            "predicted_label": 149
+        },
+        "processed": {
+            "max_attention": 0.020230166614055634,
+            "min_attention": 0.0012366322334855795,
+            "mean_attention": 0.005076142493635416,
+            "predicted_label": 35
+        }
+    }
+]
