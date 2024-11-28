@@ -2,8 +2,9 @@
 ### Server Side
 
 should be using a container or a virtual environment
-
-run the server.py
+```
+python3 server.py
+```
 
 
 ### Client Side
